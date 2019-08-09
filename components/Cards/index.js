@@ -79,7 +79,7 @@ console.log('error', error)
     photo.alt = 'Photo of author';
     credit.textContent = `By ${object.authorName}`;
 
-  card.appendChild(headline);
+  card.appendChild(headline); 
   card.appendChild(author);
   author.appendChild(photoCon);
   photoCon.appendChild(photo);
