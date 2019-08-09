@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+<!-- Is an object representation of the html elements of a webpage. Gives the interface that can interact with and  manipulate the page like changing content and style. -->
+
 2. What is an event?
+
+<!-- Carries the object information about the event so that it may be handled at any point up thr tree from the point of the origin -->
 
 3. What is an event listener?
 
+<!-- Takes two arguments, first the event to listen for, second the callback to the fire when that event is triggered. -->
+
 4. Why would we convert a NodeList into an Array?
 
+<!-- Has accesss to forEach, and you don't have to use any other array methods -->
+
 5. What is a component?
+
+<!-- Components are reusable pieces of code that can be used to build elements sharing functionality and styling. -->
 
 ### Git Set up
 
