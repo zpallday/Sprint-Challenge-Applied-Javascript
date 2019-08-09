@@ -33,4 +33,4 @@ function Header(Head, Dates, Temp) {
     console.log(headerContainer);
     headerContainer.appendChild(header);
 }
-Header('Lambda Time', 'SMARCH 28, 2019', '98');
+Header('Lambda Time', 'August 9, 2019', '98');
