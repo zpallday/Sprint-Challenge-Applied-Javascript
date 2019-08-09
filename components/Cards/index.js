@@ -28,11 +28,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
   const items = object.data.articles.bootstrap
 
   items.forEach(article => {
-  cardContainer.append(createCard(article))
- })
+cardContainer.append(createCard(article))
 
-   const js = object.data.articles.javascript
+    })
 
+  const js = object.data.articles.javascript
    js.forEach(article => {
    cardContainer.append(createCard(article))
 
@@ -57,39 +57,33 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     })
 
 })
-
 .catch(error => {
-  console.log('error', error)
+console.log('error', error)
 })
 
-function createCard(object){
+  function createCard(object){
   const card = document.createElement('div');
   const headline = document.createElement('div');
   const author = document.createElement('div');
-  const photo = document.createElement('div');
+  const photoCon = document.createElement('div');
   const photo = document.createElement('img');
   const credit = document.createElement('span');
-
 
     card.classList.add('card');
     headline.classList.add('headline');
     author.classList.add('author');
-    photo.classList.add('img-container');
-
-
+    photoCon.classList.add('img-container');
 
     headline.textContent = object.headline;
     photo.src = object.authorPhoto;
     photo.alt = 'Photo of author';
     credit.textContent = `By ${object.authorName}`;
 
+  card.appendChild(headline);
+  card.appendChild(author);
+  author.appendChild(photoCon);
+  photoCon.appendChild(photo);
+  author.appendChild(credit);
 
-    card.appendChild(headline);
-    card.appendChild(author);
-    author.appendChild(photo);
-    photo.appendChild(photo);
-    author.appendChild(credit);
-
-return card;
-
+  return card;
 }
